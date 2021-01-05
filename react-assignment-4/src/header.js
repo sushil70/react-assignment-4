@@ -20,7 +20,21 @@ class Header extends Component {
                             </a>
                         </div>
                         <div className="nav">
-                            <span className="nav-item">Home</span>
+                            <div className="nav-item-list">
+                                <span className="nav-item">Home</span>
+                                <span className="nav-item">About</span>
+                                <span className="nav-item">Shop</span>
+                                <span className="nav-item">Donate</span>
+                                <span className="nav-item">Contact</span>
+                            </div>
+                            <div>
+                                <i
+                                    class="fa fa-shopping-cart"
+                                    aria-hidden="true"
+                                >
+                                    <span className="cart-count">0</span>
+                                </i>
+                            </div>
                         </div>
                     </div>
                 </div>
