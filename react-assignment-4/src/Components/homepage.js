@@ -201,13 +201,13 @@ class Home extends Component {
                     </div>
                 </div>
 
-                <div class="shop-local-section">
-                    <div class="container shop-local-container">
-                        <div class="shop-local-wrapper">
-                            <div class="shop-local-left"></div>
-                            <div class="shop-local-right">
-                                <div class="shop-local-content-wrapper">
-                                    <h2 class="shop-local-heading">
+                <div className="shop-local-section">
+                    <div className="container shop-local-container">
+                        <div className="shop-local-wrapper">
+                            <div className="shop-local-left"></div>
+                            <div className="shop-local-right">
+                                <div className="shop-local-content-wrapper">
+                                    <h2 className="shop-local-heading">
                                         Shop Local.
                                     </h2>
                                     <p>

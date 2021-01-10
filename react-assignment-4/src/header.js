@@ -49,7 +49,7 @@ class Header extends Component {
 
                             <div>
                                 <i
-                                    class="fa fa-shopping-cart"
+                                    className="fa fa-shopping-cart"
                                     aria-hidden="true"
                                 >
                                     <span className="cart-count">0</span>
