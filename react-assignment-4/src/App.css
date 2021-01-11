@@ -772,3 +772,184 @@ img {
   cursor: pointer;
   border-radius: 0;
 }
+
+.page-title-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #222;
+  color: #f9f9f9;
+}
+
+.page-title {
+  margin-top: 10px;
+}
+
+.content-section {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.content-section.featured-section {
+  padding-bottom: 0px;
+}
+
+.featured-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  border-radius: 5px;
+  background-image: url(https://assets.website-files.com/5e853c3383474026e43f2c78/5e856e41c718420c18dd6751_patrick-hendry-eDgUyGu93Yw-unsplash.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  color: #f9f9f9;
+  text-decoration: none;
+}
+
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.content-section {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.shop-page-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.shop-category-menu {
+  width: 20%;
+  padding-right: 25px;
+}
+
+.category-menu-heading {
+  margin-top: 0px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.category-menu-item {
+  margin-bottom: 10px;
+}
+
+.btn.dark.outline.cat-menu {
+  width: 100%;
+}
+
+.btn.dark.outline {
+  border-color: #222;
+  color: #222;
+}
+
+.btn.outline {
+  background-color: transparent;
+  color: #eb5757;
+}
+
+.btn.dark {
+  border-color: #222;
+  background-color: #222;
+}
+
+.btn {
+  padding: 5px 25px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #eb5757;
+  border-radius: 5px;
+  background-color: #eb5757;
+  -webkit-transition: border-color 300ms ease, background-color 300ms ease;
+  transition: border-color 300ms ease, background-color 300ms ease;
+  font-weight: 700;
+}
+
+.w-button {
+  display: inline-block;
+  padding: 9px 15px;
+  background-color: #3898EC;
+  color: white;
+  border: 0;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.shop-list {
+  width: 80%;
+}
+
+.products-list {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+}
+
+.shop-item-wrapper {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.shop-item-link-wrapper {
+  width: 100%;
+  text-decoration: none;
+}
+
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.shop-image.tumbler-1.narrow-list {
+  min-height: 400px;
+}
+
+.shop-image.tumbler-1 {
+  /* background-image: url(https://d3e54v103j8qbb.cloudfront.net/img/example-bg.png); */
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.shop-image.tumbler-1 {
+  position: relative;
+  margin-bottom: 15px;
+  /* background-image: url(https://d3e54v103j8qbb.cloudfront.net/img/example-bg.png); */
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.shop-image {
+  min-height: 500px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  /* background-image: url(https://d3e54v103j8qbb.cloudfront.net/img/example-bg.png); */
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.image1{
+  background-image: url('https://assets.website-files.com/5e853c3383474026e43f2c78/5e861d123df4d175e80e8beb_acme-gift-card.jpg');
+}
+
+.image2{
+  background-image: url('https://assets.website-files.com/5e853c3383474026e43f2c78/5e8542c1248e59128e08e3e9_ryan-holloway-JyDmUaXMib4-unsplash.jpg');
+}
+
+.image3{
+  background-image: url('https://assets.website-files.com/5e853c3383474026e43f2c78/5e85425605cae11f20d46181_denisse-leon-J7CjWufjmg4-unsplash.jpg');
+}
+
+.image4{
+  background-image: url('https://assets.website-files.com/5e853c3383474026e43f2c78/5e8542198347409e463f436b_jakob-owens-O_bhy3TnSYU-unsplash.jpg');
+}
