@@ -52,6 +52,10 @@ class Shop extends Component {
         }
     }
 
+    // giftcard = () => {
+    //     alert("clicked")
+    // }
+
     componentDidMount() {
         this.setState({productsData: products})
     }
@@ -75,7 +79,7 @@ class Shop extends Component {
                                         //         "https://assets.website-files.com/5e853c3383474026e43f2c78/5e856e41c718420c18dd6751_patrick-hendry-eDgUyGu93Yw-unsplash.jpg"
                                         //     ),
                                         // }}
-                                        href="/product/white-tent"
+                                        href="/product/White Tent"
                                         className="featured-wrapper w-inline-block"
                                     >
                                         <div className="pill-2 badge primary featured">
@@ -113,12 +117,13 @@ class Shop extends Component {
                                             role="listitem"
                                             class="category-menu-item w-dyn-item"
                                         >
-                                            <a
+                                            <div
+                                                onClick={this.giftcard}
                                                 href="/category/gift-cards"
                                                 class="btn dark outline cat-menu w-button"
                                             >
                                                 Gift Cards
-                                            </a>
+                                            </div>
                                         </div>
                                         <div
                                             role="listitem"
@@ -165,7 +170,7 @@ class Shop extends Component {
                                         <div role="listitem" class="w-dyn-item">
                                             <div class="shop-item-wrapper">
                                                 <a
-                                                    href="/product/gift-card"
+                                                    href="/product/Gift Card"
                                                     class="shop-item-link-wrapper w-inline-block"
                                                 >
                                                     <div
@@ -195,7 +200,7 @@ class Shop extends Component {
                                                 </a>
                                                 <div class="shop-button-wrapper">
                                                     <a
-                                                        href="/product/gift-card"
+                                                        href="/product/Gift Card"
                                                         class="btn w-button"
                                                     >
                                                         Details
@@ -206,7 +211,7 @@ class Shop extends Component {
                                         <div role="listitem" class="w-dyn-item">
                                             <div class="shop-item-wrapper">
                                                 <a
-                                                    href="/product/tin-coffee-tumbler"
+                                                    href="/product/Tin Coffee Tumbler"
                                                     class="shop-item-link-wrapper w-inline-block"
                                                 >
                                                     <div
@@ -234,7 +239,7 @@ class Shop extends Component {
                                                 </a>
                                                 <div class="shop-button-wrapper">
                                                     <a
-                                                        href="/product/tin-coffee-tumbler"
+                                                        href="/product/Tin Coffee Tumbler"
                                                         class="btn w-button"
                                                     >
                                                         Details
@@ -245,7 +250,7 @@ class Shop extends Component {
                                         <div role="listitem" class="w-dyn-item">
                                             <div class="shop-item-wrapper">
                                                 <a
-                                                    href="/product/blue-canvas-pack"
+                                                    href="/product/Blue Convas Pack"
                                                     class="shop-item-link-wrapper w-inline-block"
                                                 >
                                                     <div
@@ -274,7 +279,7 @@ class Shop extends Component {
                                                 </a>
                                                 <div class="shop-button-wrapper">
                                                     <a
-                                                        href="/product/blue-canvas-pack"
+                                                        href="/product/Blue Convas Pack"
                                                         class="btn w-button"
                                                     >
                                                         Details
@@ -285,7 +290,7 @@ class Shop extends Component {
                                         <div role="listitem" class="w-dyn-item">
                                             <div class="shop-item-wrapper">
                                                 <a
-                                                    href="/product/green-canvas-pack"
+                                                    href="/product/Green Convas Pack"
                                                     class="shop-item-link-wrapper w-inline-block"
                                                 >
                                                     <div
@@ -313,7 +318,7 @@ class Shop extends Component {
                                                 </a>
                                                 <div class="shop-button-wrapper">
                                                     <a
-                                                        href="/product/green-canvas-pack"
+                                                        href="/product/Green Convas Pack"
                                                         class="btn w-button"
                                                     >
                                                         Details
