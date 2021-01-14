@@ -46,6 +46,46 @@ class Product extends Component {
                     prevew:
                         "https://assets.website-files.com/5e853c3383474026e43f2c78/5e8542198347409e463f436b_jakob-owens-O_bhy3TnSYU-unsplash.jpg",
                 },
+                {
+                    id: 6,
+                    title: "Donate $100",
+                    price: "100.00",
+                    oldprice: "",
+                    prevew:
+                        "https://assets.website-files.com/5e853c3383474026e43f2c78/5e85764efc81970066ae6af0_%24100%20Donation%20Image.png",
+                },
+                {
+                    id: 7,
+                    title: "Donate $50",
+                    price: "50.00",
+                    oldprice: "",
+                    prevew:
+                        "https://assets.website-files.com/5e853c3383474026e43f2c78/5e85764505cae166f5d57854_%2450%20Donation%20Image.png",
+                },
+                {
+                    id: 8,
+                    title: "Donate $25",
+                    price: "25.00",
+                    oldprice: "",
+                    prevew:
+                        "https://assets.website-files.com/5e853c3383474026e43f2c78/5e85763d28ae07cffd40f416_%2425%20Donation%20Image.png",
+                },
+                {
+                    id: 9,
+                    title: "Donate $15",
+                    price: "15.00",
+                    oldprice: "",
+                    prevew:
+                        "https://assets.website-files.com/5e853c3383474026e43f2c78/5e8576358a971384fafd6498_%2415%20Donation%20Image.png",
+                },
+                {
+                    id: 10,
+                    title: "Donate $5",
+                    price: "5.00",
+                    oldprice: "",
+                    prevew:
+                        "https://assets.website-files.com/5e853c3383474026e43f2c78/5e85762c8347402c2e405cb7_%245%20Donation%20Image.png",
+                },
             ],
         }
     }

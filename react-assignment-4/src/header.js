@@ -38,8 +38,14 @@ class Header extends Component {
                                     Shop
                                 </Link>
                                 {/* <span className="nav-item">Shop</span> */}
-                                <span className="nav-item">Donate</span>
-                                <span className="nav-item">Contact</span>
+                                {/* <span className="nav-item">Donate</span> */}
+                                <Link to="/donate" className="nav-item">
+                                    Donate
+                                </Link>
+                                {/* <span className="nav-item">Contact</span> */}
+                                <Link to="/contact" className="nav-item">
+                                    Contact
+                                </Link>
 
                                 {/* <Route path="/about" component={About} />
                                     <Route path="/shop" component={Shop} />
