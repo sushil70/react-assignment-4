@@ -6,10 +6,12 @@ class Contact extends Component {
         this.state = {}
     }
 
-    submitClick = () => {
-        alert("clicked")
-        let testing = document.getElementById("contact")
-        console.log(testing)
+    submitClick = (e) => {
+        e.preventDefault()
+        let testing = document.getElementById("email-form")
+        testing.style.display = "none"
+        let success = document.getElementById("contact-success")
+        success.style.display = "block"
     }
 
     render() {
@@ -97,6 +99,7 @@ class Contact extends Component {
                                         name="email-form"
                                         data-name="Email Form"
                                         className="contact-email-form"
+                                        onSubmit={this.submitClick}
                                     >
                                         <label for="name">Name</label>
                                         <input
@@ -107,7 +110,6 @@ class Contact extends Component {
                                             data-name="Name"
                                             placeholder="Enter your name"
                                             id="name"
-                                            onClick={this.submitClick}
                                         />
                                         <label for="email">Email Address</label>
                                         <input
@@ -136,10 +138,12 @@ class Contact extends Component {
                                             value="Submit"
                                             data-wait="Please wait..."
                                             class="btn w-button"
-                                            onClick="submitClick()"
                                         />
                                     </form>
-                                    <div class="contact-success w-form-done">
+                                    <div
+                                        class="contact-success w-form-done"
+                                        id="contact-success"
+                                    >
                                         <div>
                                             Thank you! Your submission has been
                                             received! We'll be in touch soon!

@@ -1277,19 +1277,23 @@ label {
   border: 1px solid #cccccc;
 }
 
-.contact-success {
+#contact-success {
   min-height: 280px;
   padding-top: 125px;
   border-radius: 5px;
   background-color: #20c788;
   color: #f9f9f9;
-}
-
-.w-form-done {
+  
   display: none;
   padding: 20px;
   text-align: center;
 }
+
+/* .w-form-done {
+  display: none;
+  padding: 20px;
+  text-align: center;
+} */
 
 .contact-error {
   border-radius: 5px;
@@ -1304,5 +1308,5 @@ label {
 }
 
 .contact-email-form{
-  display: inline
+  /* display: none */
 }
