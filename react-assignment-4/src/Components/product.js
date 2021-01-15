@@ -1,4 +1,6 @@
 import React, {Component} from "react"
+import {addCart} from "../redux"
+import {connect} from "react-redux"
 
 class Product extends Component {
     constructor(props) {
@@ -89,13 +91,20 @@ class Product extends Component {
             ],
         }
     }
+
+    subm = (e) => {
+        e.preventDefault()
+    }
+
     render() {
         const {products} = this.state
         console.log(this.state.products)
         const productItemCaller = this.props.location.pathname.split("/")[2]
         console.log(productItemCaller)
+
         return (
             <>
+                <h1>{this.props.tester}</h1>
                 {products.map((productitem) =>
                     productItemCaller == productitem.title ? (
                         <>
@@ -120,7 +129,10 @@ class Product extends Component {
                                         $ {productitem.price} USD
                                     </div>
                                     <div>
-                                        <form className="shop-form">
+                                        <form
+                                            className="shop-form"
+                                            onSubmit={this.subm}
+                                        >
                                             <label className="qua">
                                                 Quantity
                                             </label>
@@ -135,6 +147,7 @@ class Product extends Component {
                                                     type="submit"
                                                     value="Add to Cart"
                                                     className="shop-submit-butt"
+                                                    onClick={this.props.addCart}
                                                 />
                                             </div>
                                         </form>
@@ -189,4 +202,16 @@ class Product extends Component {
     }
 }
 
-export default Product
+const mapStateToProps = (state) => {
+    return {
+        tester: state.testdata,
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addCart: () => dispatch(addCart()),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Product)
