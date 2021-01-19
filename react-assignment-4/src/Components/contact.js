@@ -1,4 +1,6 @@
 import React, {Component} from "react"
+import Header from "../header"
+import Footer from "../footer"
 
 class Contact extends Component {
     constructor(props) {
@@ -17,9 +19,10 @@ class Contact extends Component {
     render() {
         return (
             <>
+                <Header />
                 <div class="contact-hero-section">
-                    <div class="contact-hero-bg-wrapper">
-                        <div class="container contact">
+                    <div class="contact-hero-bg-wrapper cont1">
+                        <div class="container contact cont1">
                             <h1 class="heading">Contact Acme Outdoors</h1>
                             <div class="contact-block-wrapper">
                                 <div class="contact-block">
@@ -64,11 +67,11 @@ class Contact extends Component {
                     </div>
                 </div>
 
-                <div id="contact" class="content-section">
+                <div id="contact" class="content-section contact-top">
                     <div class="container">
                         <div class="contact-wrapper">
                             <div class="contact-left">
-                                <h2>Contact Us</h2>
+                                <h1>Contact Us</h1>
                                 <div class="w-richtext">
                                     <p>
                                         Acme Outdoors
@@ -88,7 +91,7 @@ class Contact extends Component {
                                 </div>
                             </div>
                             <div class="contact-right">
-                                <h2>Contact Form</h2>
+                                <h1>Contact Form</h1>
                                 <p>
                                     Send us a message and we'll get back to you
                                     as soon as we can!{" "}
@@ -160,6 +163,7 @@ class Contact extends Component {
                         </div>
                     </div>
                 </div>
+                <Footer />
             </>
         )
     }

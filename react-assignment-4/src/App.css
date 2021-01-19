@@ -5,6 +5,10 @@ body {
   line-height: 1.5;
 }
 
+Link{
+  text-decoration: none;
+}
+
 
 .hero-section {
   min-height: 550px;
@@ -22,6 +26,11 @@ body {
   padding-right: 15px;
   padding-left: 15px;
 }
+
+.cont1{
+  padding-top:75px;
+}
+
 
 .hero-wrapper {
   display: flexbox;
@@ -438,11 +447,11 @@ img {
   -ms-flex-pack: center;
   justify-content: center;
 }
-
+/* 
 .btn.dark {
   border-color: #222;
   background-color: #222;
-}
+} */
 
 .w-button {
   display: inline-block;
@@ -539,10 +548,10 @@ img {
   padding-bottom: 0px;
 }
 
-.content-section {
+/* .content-section {
   padding-top: 65px;
   padding-bottom: 65px;
-}
+} */
 
 .container {
   max-width: 1200px;
@@ -587,10 +596,10 @@ img {
   text-align: center;
 }
 
-.content-section {
+/* .content-section {
   padding-top: 65px;
   padding-bottom: 65px;
-}
+} */
 
 .container {
   max-width: 1200px;
@@ -784,10 +793,10 @@ img {
   margin-top: 10px;
 }
 
-.content-section {
+/* .content-section {
   padding-top: 65px;
   padding-bottom: 65px;
-}
+} */
 
 .content-section.featured-section {
   padding-bottom: 0px;
@@ -810,10 +819,10 @@ img {
   display: inline-block;
 }
 
-.content-section {
+/* .content-section {
   padding-top: 65px;
   padding-bottom: 65px;
-}
+} */
 
 .shop-page-wrapper {
   display: -webkit-box;
@@ -838,7 +847,7 @@ img {
 }
 
 .btn.dark.outline.cat-menu {
-  width: 100%;
+  width: 80%;
 }
 
 .btn.dark.outline {
@@ -853,7 +862,7 @@ img {
 
 .btn.dark {
   border-color: #222;
-  background-color: #222;
+  /* background-color: #222; */
 }
 
 .btn {
@@ -1081,10 +1090,10 @@ img {
   text-align: center;
 }
 
-.content-section {
+/* .content-section {
   padding-top: 65px;
   padding-bottom: 65px;
-}
+} */
 
 .donate-wrapper {
   width: 50%;
@@ -1310,3 +1319,50 @@ label {
 .contact-email-form{
   /* display: none */
 }
+
+.home-shop-3 {
+    background-image: url(https://assets.website-files.com/5e853c3383474026e43f2c78/5e856e41c718420c18dd6751_patrick-hendry-eDgUyGu93Yw-unsplash.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.home-shop{
+  background-image: url(https://assets.website-files.com/5e853c3383474026e43f2c78/5e8542c1248e59128e08e3e9_ryan-holloway-JyDmUaXMib4-unsplash.jpg);
+}
+
+.home-shop-2{
+  background-image: url(https://assets.website-files.com/5e853c3383474026e43f2c78/5e85425605cae11f20d46181_denisse-leon-J7CjWufjmg4-unsplash.jpg);
+}
+
+.pill-2.badge.primary.featured {
+  position: absolute;
+  left: auto;
+  top: 8%;
+  right: 1%;
+  bottom: auto;
+  z-index: 10;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+.pill-2 {
+  margin-right: 10px;
+  padding: 5px 20px;
+  border-radius: 20px;
+  background-color: #1976d2;
+  color: #f9f9f9;
+}
+
+.feature-text-wrapper {
+  position: absolute;
+  left: 2%;
+  top: auto;
+  right: auto;
+  bottom: 6%;
+  z-index: 10;
+}
+/* 
+.contact-top{
+  padding-top:110px
+} */

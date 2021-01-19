@@ -1,4 +1,8 @@
 import React, {Component} from "react"
+import Header from "../header"
+import Footer from "../footer"
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"
+import Product from "./product"
 
 const products = [
     {
@@ -62,8 +66,14 @@ class Shop extends Component {
     render() {
         return (
             <>
+                {/* <Router> */}
+                <Header />
+                {/* <Route path="/product">
+                        <Product />
+                    </Route> */}
+
                 <div className="page-title-section">
-                    <div className="container">
+                    <div className="container cont1">
                         <h1 className="page-title">Shop Our Products</h1>
                     </div>
                 </div>
@@ -73,13 +83,14 @@ class Shop extends Component {
                         <div className="w-dyn-list">
                             <div role="list" className="w-dyn-items">
                                 <div role="listitem" className="w-dyn-item">
-                                    <a
+                                    <Link
+                                        to="/product?White Tent"
                                         // style={{
                                         //     backgroundImage: url(
                                         //         "https://assets.website-files.com/5e853c3383474026e43f2c78/5e856e41c718420c18dd6751_patrick-hendry-eDgUyGu93Yw-unsplash.jpg"
                                         //     ),
                                         // }}
-                                        href="/product/White Tent"
+                                        // href="/product/White Tent"
                                         className="featured-wrapper w-inline-block"
                                     >
                                         <div className="pill-2 badge primary featured">
@@ -97,7 +108,7 @@ class Shop extends Component {
                                             </div>
                                         </div>
                                         <div className="featured-gradient-overlay"></div>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -117,20 +128,19 @@ class Shop extends Component {
                                             role="listitem"
                                             class="category-menu-item w-dyn-item"
                                         >
-                                            <div
-                                                onClick={this.giftcard}
-                                                href="/category/gift-cards"
+                                            <a
+                                                href="#"
                                                 class="btn dark outline cat-menu w-button"
                                             >
                                                 Gift Cards
-                                            </div>
+                                            </a>
                                         </div>
                                         <div
                                             role="listitem"
                                             class="category-menu-item w-dyn-item"
                                         >
                                             <a
-                                                href="/category/tents"
+                                                href="#"
                                                 class="btn dark outline cat-menu w-button"
                                             >
                                                 Tents
@@ -141,7 +151,7 @@ class Shop extends Component {
                                             class="category-menu-item w-dyn-item"
                                         >
                                             <a
-                                                href="/category/accessories"
+                                                href="#"
                                                 class="btn dark outline cat-menu w-button"
                                             >
                                                 Accessories
@@ -152,7 +162,7 @@ class Shop extends Component {
                                             class="category-menu-item w-dyn-item"
                                         >
                                             <a
-                                                href="/category/packs"
+                                                href="#"
                                                 class="btn dark outline cat-menu w-button"
                                             >
                                                 Packs
@@ -169,21 +179,15 @@ class Shop extends Component {
                                     >
                                         <div role="listitem" class="w-dyn-item">
                                             <div class="shop-item-wrapper">
-                                                <a
-                                                    href="/product/Gift Card"
+                                                <Link
+                                                    to="/product?Gift Card"
+                                                    // href="/product/Gift Card"
                                                     class="shop-item-link-wrapper w-inline-block"
                                                 >
                                                     <div
                                                         // style='background-image:url("https://assets.website-files.com/5e853c3383474026e43f2c78/5e861d123df4d175e80e8beb_acme-gift-card.jpg")'
                                                         class="shop-image tumbler-1 narrow-list image1"
-                                                    >
-                                                        <div
-                                                            data-wf-sku-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22default-sku%3Acompare-at-price%22%3A%7B%22exists%22%3A%22yes%22%2C%22type%22%3A%22CommercePrice%22%7D%7D%7D%2C%22timezone%22%3A%22America%2FChicago%22%7D"
-                                                            class="pill-2 badge primary sale w-condition-invisible"
-                                                        >
-                                                            Sale
-                                                        </div>
-                                                    </div>
+                                                    ></div>
                                                     <div class="shop-details-wrapper">
                                                         <div class="shop-details-left">
                                                             <div class="shop-item-name">
@@ -197,31 +201,29 @@ class Shop extends Component {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </a>
+                                                </Link>
                                                 <div class="shop-button-wrapper">
-                                                    <a
-                                                        href="/product/Gift Card"
+                                                    <Link
+                                                        to="/product?Gift Card"
+                                                        // href="/product/Gift Card"
                                                         class="btn w-button"
                                                     >
                                                         Details
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
                                         <div role="listitem" class="w-dyn-item">
                                             <div class="shop-item-wrapper">
-                                                <a
-                                                    href="/product/Tin Coffee Tumbler"
+                                                <Link
+                                                    to="/product?Tin Coffee Tumbler"
+                                                    // href="/product/Tin Coffee Tumbler"
                                                     class="shop-item-link-wrapper w-inline-block"
                                                 >
                                                     <div
                                                         // style='background-image:url("https://assets.website-files.com/5e853c3383474026e43f2c78/5e8542c1248e59128e08e3e9_ryan-holloway-JyDmUaXMib4-unsplash.jpg")'
                                                         class="shop-image tumbler-1 narrow-list image2"
-                                                    >
-                                                        <div class="pill-2 badge primary sale w-condition-invisible">
-                                                            Sale
-                                                        </div>
-                                                    </div>
+                                                    ></div>
                                                     <div class="shop-details-wrapper">
                                                         <div class="shop-details-left">
                                                             <div class="shop-item-name">
@@ -236,31 +238,29 @@ class Shop extends Component {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </a>
+                                                </Link>
                                                 <div class="shop-button-wrapper">
-                                                    <a
-                                                        href="/product/Tin Coffee Tumbler"
+                                                    <Link
+                                                        to="/product?Tin Coffee Tumbler"
+                                                        // href="/product/Tin Coffee Tumbler"
                                                         class="btn w-button"
                                                     >
                                                         Details
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
                                         <div role="listitem" class="w-dyn-item">
                                             <div class="shop-item-wrapper">
-                                                <a
-                                                    href="/product/Blue Convas Pack"
+                                                <Link
+                                                    to="/product?Blue Canvas Pack"
+                                                    // href="/product/Blue Canvas Pack"
                                                     class="shop-item-link-wrapper w-inline-block"
                                                 >
                                                     <div
                                                         // style='background-image:url("https://assets.website-files.com/5e853c3383474026e43f2c78/5e85425605cae11f20d46181_denisse-leon-J7CjWufjmg4-unsplash.jpg")'
                                                         class="shop-image tumbler-1 narrow-list image3"
-                                                    >
-                                                        <div class="pill-2 badge primary sale">
-                                                            Sale
-                                                        </div>
-                                                    </div>
+                                                    ></div>
                                                     <div class="shop-details-wrapper">
                                                         <div class="shop-details-left">
                                                             <div class="shop-item-name">
@@ -276,31 +276,29 @@ class Shop extends Component {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </a>
+                                                </Link>
                                                 <div class="shop-button-wrapper">
-                                                    <a
-                                                        href="/product/Blue Convas Pack"
+                                                    <Link
+                                                        to="/product?Blue Canvas Pack"
+                                                        // href="/product/Blue Canvas Pack"
                                                         class="btn w-button"
                                                     >
                                                         Details
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
                                         <div role="listitem" class="w-dyn-item">
                                             <div class="shop-item-wrapper">
-                                                <a
-                                                    href="/product/Green Convas Pack"
+                                                <Link
+                                                    to="/product?Green Canvas Pack"
+                                                    // href="/product/Green Canvas Pack"
                                                     class="shop-item-link-wrapper w-inline-block"
                                                 >
                                                     <div
                                                         // style='background-image:url("https://assets.website-files.com/5e853c3383474026e43f2c78/5e8542198347409e463f436b_jakob-owens-O_bhy3TnSYU-unsplash.jpg")'
                                                         class="shop-image tumbler-1 narrow-list image4"
-                                                    >
-                                                        <div class="pill-2 badge primary sale w-condition-invisible">
-                                                            Sale
-                                                        </div>
-                                                    </div>
+                                                    ></div>
                                                     <div class="shop-details-wrapper">
                                                         <div class="shop-details-left">
                                                             <div class="shop-item-name">
@@ -315,14 +313,15 @@ class Shop extends Component {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </a>
+                                                </Link>
                                                 <div class="shop-button-wrapper">
-                                                    <a
-                                                        href="/product/Green Convas Pack"
+                                                    <Link
+                                                        to="/product?Green Canvas Pack"
+                                                        // href="/product/Green Canvas Pack"
                                                         class="btn w-button"
                                                     >
                                                         Details
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -332,6 +331,8 @@ class Shop extends Component {
                         </div>
                     </div>
                 </div>
+                <Footer />
+                {/* </Router> */}
             </>
         )
     }

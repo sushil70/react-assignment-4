@@ -3,7 +3,7 @@ import "./App.css"
 import Footer from "./footer"
 import Header from "./header"
 import Home from "./Components/homepage"
-import {BrowserRouter, Route, Link} from "react-router-dom"
+import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom"
 import {Provider} from "react-redux"
 import About from "./Components/aboutpage"
 import Shop from "./Components/shoppage"
@@ -16,14 +16,28 @@ function App() {
     return (
         <>
             <Provider store={store}>
-                <Header />
-                <Route exact path="/" component={Home} />
-                <Route path="/about" component={About} />
-                <Route path="/shop" component={Shop} />
-                <Route path="/product" component={Product} />
-                <Route path="/donate" component={Donate} />
-                <Route path="/contact" component={Contact} />
-                <Footer />
+                <Router>
+                    {/* <Switch> */}
+                    {/* <Header /> */}
+                    <Route exact path="/" component={Home}>
+                        <Home />
+                    </Route>
+                    <Route path="/about" component={About}>
+                        <About />
+                    </Route>
+                    <Route path="/shop" component={Shop}>
+                        <Shop />
+                    </Route>
+                    <Route path="/product" component={Product} />
+                    <Route path="/donate" component={Donate}>
+                        <Donate />
+                    </Route>
+                    <Route path="/contact" component={Contact}>
+                        <Contact />
+                    </Route>
+                    {/* <Footer /> */}
+                    {/* </Switch> */}
+                </Router>
             </Provider>
         </>
     )

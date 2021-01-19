@@ -1,4 +1,7 @@
 import React, {Component} from "react"
+import Header from "../header"
+import Footer from "../footer"
+import {Link} from "react-router-dom"
 
 class Home extends Component {
     constructor(props) {
@@ -8,8 +11,9 @@ class Home extends Component {
     render() {
         return (
             <>
+                <Header />
                 <div className="hero-section">
-                    <div className="container">
+                    <div className="container cont1">
                         <div className="hero-wrapper">
                             <h1 className="hero-heading">
                                 Serving you <br />
@@ -21,12 +25,13 @@ class Home extends Component {
                                 City.
                             </p>
                             <div className="hero-button-wrapper">
-                                <a
-                                    href="/shop"
+                                <Link
+                                    to="/shop"
+                                    // href="/shop"
                                     className="btn light outline w-button"
                                 >
                                     Shop Merch
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -136,7 +141,7 @@ class Home extends Component {
                             </p>
                             <div className="safe-button-wrapper">
                                 <a
-                                    href="/alert/how-were-responding-to-covid-19"
+                                    href="#"
                                     className="btn light hero safe w-button"
                                 >
                                     Read Our Statement
@@ -166,10 +171,12 @@ class Home extends Component {
                             >
                                 <div role="listitem" className="w-dyn-item">
                                     <div className="shop-item-wrapper">
-                                        <a
-                                            href="/product/white-tent"
+                                        <Link
+                                            to="/product?White Tent"
+                                            // href="/product/white-tent"
                                             className="shop-item-link-wrapper w-inline-block"
                                         >
+                                            <div class="shop-image home-shop-3"></div>
                                             <div className="shop-details-wrapper">
                                                 <div className="shop-details-left">
                                                     <div className="shop-item-name">
@@ -180,23 +187,89 @@ class Home extends Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </a>
+                                        </Link>
                                         <div className="shop-button-wrapper">
-                                            <a
-                                                href="/product/white-tent"
+                                            <Link
+                                                to="/product?White Tent"
+                                                // href="/product/white-tent"
                                                 className="btn w-button"
                                             >
                                                 Details
-                                            </a>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="listitem" className="w-dyn-item">
+                                    <div className="shop-item-wrapper">
+                                        <Link
+                                            to="/product?Tin Coffee Tumbler"
+                                            // href="/product/white-tent"
+                                            className="shop-item-link-wrapper w-inline-block"
+                                        >
+                                            <div class="shop-image home-shop"></div>
+                                            <div className="shop-details-wrapper">
+                                                <div className="shop-details-left">
+                                                    <div className="shop-item-name">
+                                                        Tin Coffee Tumbler
+                                                    </div>
+                                                    <div className="price-wrapper">
+                                                        $&nbsp;35.00&nbsp;USD
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </Link>
+                                        <div className="shop-button-wrapper">
+                                            <Link
+                                                to="/product?Tin Coffee Tumbler"
+                                                // href="/product/white-tent"
+                                                className="btn w-button"
+                                            >
+                                                Details
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="listitem" className="w-dyn-item">
+                                    <div className="shop-item-wrapper">
+                                        <Link
+                                            to="/product?Blue Canvas Pack"
+                                            // href="/product/white-tent"
+                                            className="shop-item-link-wrapper w-inline-block"
+                                        >
+                                            <div class="shop-image home-shop-2"></div>
+                                            <div className="shop-details-wrapper">
+                                                <div className="shop-details-left">
+                                                    <div className="shop-item-name">
+                                                        Blue Canvas Pack
+                                                    </div>
+                                                    <div className="price-wrapper">
+                                                        $&nbsp;95.00&nbsp;USD
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </Link>
+                                        <div className="shop-button-wrapper">
+                                            <Link
+                                                to="/product?Blue Canvas Pack"
+                                                // href="/product/white-tent"
+                                                className="btn w-button"
+                                            >
+                                                Details
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <div className="shop-more">
-                            <a href="/shop" className="btn dark w-button">
+                            <Link
+                                to="/shop"
+                                // href="/shop"
+                                className="btn dark w-button"
+                            >
                                 View All Products
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -239,6 +312,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
+                <Footer />
             </>
         )
     }

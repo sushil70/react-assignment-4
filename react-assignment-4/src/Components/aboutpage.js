@@ -1,4 +1,7 @@
 import React, {Component} from "react"
+import Header from "../header"
+import Footer from "../footer"
+import {Link} from "react-router-dom"
 
 class About extends Component {
     constructor(props) {
@@ -8,8 +11,9 @@ class About extends Component {
     render() {
         return (
             <>
+                <Header />
                 <div className="hero-section about-hero">
-                    <div className="container">
+                    <div className="container cont1">
                         <div className="hero-wrapper">
                             <h1 className="hero-heading anout-hero-heading">
                                 Your Adventure
@@ -23,12 +27,13 @@ class About extends Component {
                                 adventure complete.
                             </p>
                             <div className="hero-button-wrapper">
-                                <a
-                                    href="/shop"
+                                <Link
+                                    to="/shop"
+                                    // href="/shop"
                                     className="btn light outline w-button"
                                 >
                                     Shop Merch
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -223,16 +228,18 @@ class About extends Component {
                                 delivery details, we're ready to help!
                             </p>
                             <div class="hero-button-wrapper">
-                                <a
-                                    href="/contact"
+                                <Link
+                                    to="/contact"
+                                    // href="/contact"
                                     class="btn light outline w-button"
                                 >
                                     Contact Support
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
+                <Footer />
             </>
         )
     }

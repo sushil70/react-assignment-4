@@ -1,6 +1,8 @@
 import React, {Component} from "react"
 import {addCart} from "../redux"
 import {connect} from "react-redux"
+import Header from "../header"
+import Footer from "../footer"
 
 class Product extends Component {
     constructor(props) {
@@ -33,7 +35,7 @@ class Product extends Component {
                 },
                 {
                     id: 4,
-                    title: "Blue Convas Pack",
+                    title: "Blue Canvas Pack",
                     price: "95.00",
                     oldprice: "145.00",
                     prevew:
@@ -42,7 +44,7 @@ class Product extends Component {
 
                 {
                     id: 5,
-                    title: "Green Convas Pack",
+                    title: "Green Canvas Pack",
                     price: "125.00",
                     oldprice: "",
                     prevew:
@@ -89,22 +91,25 @@ class Product extends Component {
                         "https://assets.website-files.com/5e853c3383474026e43f2c78/5e85762c8347402c2e405cb7_%245%20Donation%20Image.png",
                 },
             ],
+            productToStore: [],
         }
     }
 
     subm = (e) => {
         e.preventDefault()
+        // let productAmount = document.getElementById("shop-number-input").value
+        // alert(productAmount)
     }
 
     render() {
-        const {products} = this.state
+        const {products, productToStore} = this.state
         console.log(this.state.products)
-        const productItemCaller = this.props.location.pathname.split("/")[2]
+        const productItemCaller = this.props.location.search.split("?")[1]
         console.log(productItemCaller)
 
         return (
             <>
-                <h1>{this.props.tester}</h1>
+                <Header />
                 {products.map((productitem) =>
                     productItemCaller == productitem.title ? (
                         <>
@@ -141,6 +146,9 @@ class Product extends Component {
                                                     type="number"
                                                     min="1"
                                                     className="shop-number-input"
+                                                    id="shop-number-input"
+                                                    // min=""
+                                                    // max="5"
                                                     // value="1"
                                                 />
                                                 <input
@@ -197,6 +205,7 @@ class Product extends Component {
                         <></>
                     )
                 )}
+                <Footer />
             </>
         )
     }
@@ -209,6 +218,9 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
+    // let addingToStore = new Product().state.productToStore
+    // alert(addingToStore)
+
     return {
         addCart: () => dispatch(addCart()),
     }

@@ -5,61 +5,104 @@ import About from "./Components/aboutpage"
 import Shop from "./Components/shoppage"
 // import App from "./App"
 import Home from "./Components/homepage"
+import {connect} from "react-redux"
 
 class Header extends Component {
     constructor(props) {
         super(props)
-        this.state = {}
+        this.state = {
+            carted: 0,
+        }
     }
+    componentDidMount() {
+        this.setState({carted: this.props.tester})
+        // alert(this.state.carted)
+    }
+
     render() {
         return (
             <>
-                <div className="header-main">
-                    <div className="header">
-                        <div className="logo">
-                            <a href="#" className="logo-link">
-                                <img
-                                    src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e7ff57adad44d1f072965b6_logo.svg"
-                                    alt="logo"
-                                />
-                            </a>
-                        </div>
-                        <div className="nav">
-                            <div className="nav-item-list">
-                                {/* <Router> */}
-                                <Link to="/" className="nav-item">
-                                    Home
+                <div id="header-main">
+                    <div className="header-main">
+                        <div className="header">
+                            <div className="logo">
+                                <Link to="/" href="#" className="logo-link">
+                                    <img
+                                        src="https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e7ff57adad44d1f072965b6_logo.svg"
+                                        alt="logo"
+                                    />
                                 </Link>
-                                {/* <span className="nav-item">Home</span> */}
-                                <Link to="/about" className="nav-item">
-                                    About
-                                </Link>
-                                <Link to="/shop" className="nav-item">
-                                    Shop
-                                </Link>
-                                {/* <span className="nav-item">Shop</span> */}
-                                {/* <span className="nav-item">Donate</span> */}
-                                <Link to="/donate" className="nav-item">
-                                    Donate
-                                </Link>
-                                {/* <span className="nav-item">Contact</span> */}
-                                <Link to="/contact" className="nav-item">
-                                    Contact
-                                </Link>
-
-                                {/* <Route path="/about" component={About} />
-                                    <Route path="/shop" component={Shop} />
-                                    <Route exact path="/" component={Home} />
-                                </Router> */}
                             </div>
+                            <div className="nav">
+                                <div className="nav-item-list">
+                                    {/* <Router> */}
+                                    {/* <Route exact path="/" component={Home} /> */}
+                                    <Link
+                                        to="/"
+                                        className="nav-item links"
+                                        style={{
+                                            textDecoration: "none",
+                                        }}
+                                    >
+                                        Home
+                                    </Link>
+                                    {/* <span className="nav-item">Home</span> */}
+                                    <Link
+                                        to="/about"
+                                        className="nav-item"
+                                        style={{
+                                            textDecoration: "none",
+                                        }}
+                                    >
+                                        About
+                                    </Link>
+                                    <Link
+                                        to="/shop"
+                                        className="nav-item"
+                                        style={{
+                                            textDecoration: "none",
+                                        }}
+                                    >
+                                        Shop
+                                    </Link>
+                                    {/* <span className="nav-item">Shop</span> */}
+                                    {/* <span className="nav-item">Donate</span> */}
+                                    <Link
+                                        to="/donate"
+                                        className="nav-item"
+                                        style={{
+                                            textDecoration: "none",
+                                        }}
+                                    >
+                                        Donate
+                                    </Link>
+                                    {/* <span className="nav-item">Contact</span> */}
+                                    <Link
+                                        to="/contact"
+                                        className="nav-item"
+                                        style={{
+                                            textDecoration: "none",
+                                        }}
+                                    >
+                                        Contact
+                                    </Link>
 
-                            <div>
-                                <i
-                                    className="fa fa-shopping-cart"
-                                    aria-hidden="true"
-                                >
-                                    <span className="cart-count">0</span>
-                                </i>
+                                    {/* <Route path="/about" component={About} /> */}
+                                    {/* <Route path="/shop" component={Shop} /> */}
+                                    {/* <Route exact path="/" component={Home} /> */}
+                                    {/* </Router> */}
+                                </div>
+
+                                <div>
+                                    <i
+                                        className="fa fa-shopping-cart"
+                                        aria-hidden="true"
+                                    >
+                                        <span className="cart-count">
+                                            {this.props.tester}
+                                        </span>
+                                    </i>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -69,4 +112,15 @@ class Header extends Component {
     }
 }
 
-export default Header
+// export default Header
+
+const mapStateToProps = (state) => {
+    let carted = state.testdata
+    new Header().state.carted = carted
+    // alert(carted)
+    return {
+        tester: state.testdata,
+    }
+}
+
+export default connect(mapStateToProps)(Header)

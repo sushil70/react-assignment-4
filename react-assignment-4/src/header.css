@@ -1,6 +1,16 @@
 html{
-    /* background-color: aqua; */
     margin: 0px;
+    text-decoration: none;
+}
+
+.links{
+    text-decoration: uppercase;
+}
+
+#header-main{
+    position: fixed;
+    width: 100%;
+    z-index: 11;
 }
 
 .header-main{
@@ -8,7 +18,9 @@ html{
     background-color: #eb5757;
     /* position: fixed; */
     /* width: 100%; */
+    /* max-width: 100%; */
     padding: 20px 150px;
+    /* position: fixed; */
 }
 
 .header{
@@ -16,6 +28,7 @@ html{
     background-color: #eb5757;
     width: 100%;
     justify-content: space-between;
+    
 }
 
 .logo{
